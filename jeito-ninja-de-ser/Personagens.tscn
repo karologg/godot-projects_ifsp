@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dgp6jfvsqqik6"]
+
+[ext_resource type="Script" uid="uid://bl61vwjvp8egf" path="res://Narutos.gd" id="1_ftcwn"]
+[ext_resource type="Texture2D" uid="uid://b562b1ka705tt" path="res://Capa_Naruto.jpg" id="2_ynpnw"]
+
+[node name="Node2D" type="Node2D" unique_id=1569840225]
+position = Vector2(532, 242)
+script = ExtResource("1_ftcwn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1506881059]
+offset_left = -532.0
+offset_top = -240.0
+offset_right = 617.0
+offset_bottom = 407.0
+texture = ExtResource("2_ynpnw")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=1962838496]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -166.0
+offset_top = -44.0
+offset_right = 207.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer" unique_id=387634616]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+placeholder_text = "Digite o ID do personagem (ex.: Naruto é 1344) "
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=139035693]
+layout_mode = 2
+text = "Buscar"
+
+[node name="LabelID" type="Label" parent="HBoxContainer" unique_id=1267513514]
+layout_mode = 2
+text = "ID"
+
+[node name="LabelNome" type="Label" parent="HBoxContainer" unique_id=11916057]
+layout_mode = 2
+text = "Nome"
+
+[node name="LabelPai" type="Label" parent="HBoxContainer" unique_id=731064228]
+layout_mode = 2
+text = "Pai"
+
+[node name="LabelMae" type="Label" parent="HBoxContainer" unique_id=924829650]
+layout_mode = 2
+text = "Mãe"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer" unique_id=1007718865]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ScrollContainer" unique_id=1716081924]
+layout_mode = 2
+
+[node name="LabelJutsus" type="Label" parent="HBoxContainer/ScrollContainer/VBoxContainer" unique_id=996886428]
+layout_mode = 2
+text = "Jutsus:"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=2014288565]
